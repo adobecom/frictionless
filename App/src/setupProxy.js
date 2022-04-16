@@ -1,0 +1,21 @@
+const { createProxyMiddleware } = require('http-proxy-middleware');
+// const {REACT_APP_HOST_URI, REACT_APP_AUTHORIZATION } = process.env;
+const REACT_APP_HOST_URI = 'http://localhost:4502';
+const REACT_APP_AUTHORIZATION = 'admin:admin';
+
+/*
+    Set up a proxy with AEM for local development
+    In a production enviroment this proxy should be set up at the webserver level or absolute URLs should be used.
+*/
+
+module.exports = function(app) {
+  app.use(
+    '/content',
+    createProxyMiddleware({
+      target: REACT_APP_HOST_URI,
+      changeOrigin: true,
+      //pass in credentials when developing against an Author environment
+      auth: REACT_APP_AUTHORIZATION,
+    })
+  );
+};

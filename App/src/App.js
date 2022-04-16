@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Verbs from './components/Verbs';
+import './components/Verbs.css'
 
 function App() {
 
@@ -24,6 +26,7 @@ function Home() {
   return (
     <div className="Home">
       <h2>Make great work happen from anywhere!</h2>
+      <Verbs />
   </div>
   );
 }
