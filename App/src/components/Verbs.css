@@ -34,3 +34,14 @@ a {
 h2 {
     text-align: center;
 }
+
+.fake-dc {
+    width: 90%;
+    padding: 200px 0;
+    text-align: center;
+    background: darkgray;
+    color: blue;
+    font-size: 100px;
+    border: 5px grey dotted;
+    margin: auto;
+}

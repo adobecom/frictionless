@@ -62,6 +62,8 @@ function getRequestOptions(query) {
     // headers and include authorization if authorization set
     let httpHeaders = new Headers();
     httpHeaders.append('Content-Type', 'application/json');
+    httpHeaders.append('Access-Control-Allow-Headers', '*');
+
     if(REACT_APP_AUTHORIZATION) {
         httpHeaders.append('Authorization', 'Basic ' + btoa('REACT_APP_AUTHORIZATION'))
     }

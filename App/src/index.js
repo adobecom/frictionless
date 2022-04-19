@@ -1,10 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 
-ReactDOM.render(
+const CONTAINER = document.querySelector('div');
+const ROOT = createRoot(CONTAINER);
+ROOT.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-document.querySelector('div')
+  </React.StrictMode>
 );

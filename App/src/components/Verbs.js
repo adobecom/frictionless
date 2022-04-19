@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
 import useGraphQL from '../api/useGraphQL';
 import Error from './Error';
 import Loading from './Loading';
@@ -36,7 +36,8 @@ function VerbItem(props) {
       return null;
     }
     return (
-            <Link to={`/verb:${props._path}`}>
+        <div>
+            <Link to={`/${props.verbName}`} push="true">
                 <li className="adventure-item">
                     <img className="verb-item-image" src={`http://localhost:4502/${props.icon._path}`} 
                         alt={props.verbName}/>
@@ -47,6 +48,8 @@ function VerbItem(props) {
                     <div className="adventure-item-title">{props.title}</div>
                 </li>
             </Link>
+        </div>
+
 
         );
   }
