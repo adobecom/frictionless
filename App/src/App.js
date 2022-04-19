@@ -28,7 +28,7 @@ function Home() {
 
   return (
     <div className="Home">
-      <h2>Make great work happen from anywhere!</h2>
+      <h2>Make great work happen from anywhere</h2>
       <Verbs />
   </div>
   );
