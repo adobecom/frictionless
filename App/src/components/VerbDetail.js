@@ -4,6 +4,7 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import useGraphQL from '../api/useGraphQL';
 import Error from './Error';
 import Loading from './Loading';
+import SeoBlade from './SeoBlade';
 
 function Verbs() {
     let location = useLocation();
@@ -29,6 +30,7 @@ function Verbs() {
             <div className="fake-dc">
               {data.verbByPath.item.title}
             </div>
+            <SeoBlade path={contentFragmentPath} />
         </div>
     )
 
