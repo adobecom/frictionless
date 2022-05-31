@@ -13,8 +13,9 @@ function Verbs() {
     if(!data) return <Loading />;
 
     return (
-        <div className='verbs'>
-          <ul className="verb-items">
+        <div className='footer'>
+            <h3>Try these Acrobat online tools</h3>
+          <ul className="footer-items">
             {
                 //Iterate over the returned data items from the query
                 data.verbList.items.map((verb, index) => {
@@ -38,15 +39,11 @@ function VerbItem(props) {
     return (
         <div>
             <Link to={`/${props.verbName}`} push="true">
-                <li className="adventure-item">
+                <li className="footer-item">
                     <img className="verb-item-image" src={`http://localhost:4502/${props.icon._path}`} 
                         alt={props.verbName}/>
-                    <div className="adventure-item-length">{props.title}</div>
-                    <div className="adventure-item-length-price">
-                        
-                        <div className="adventure-item-price">{props.description.plaintext}</div>
-                    </div>
-                    <div className="btn">Try  Now</div>
+    
+                    <div className="adventure-item-title">{props.title}</div>
                 </li>
             </Link>
         </div>

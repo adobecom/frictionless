@@ -13,7 +13,7 @@ function SeoBlade(props) {
 
     const [query, setQuery] = useState(seoBladeQuery(PATH));
     const { data } = useGraphQL(query);
-    console.log(data);
+
 
 
 

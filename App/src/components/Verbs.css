@@ -6,7 +6,7 @@
     width: 100%;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: normal;
+    justify-content: center;
     max-width: 1440px;
     margin: auto;
 
@@ -14,6 +14,7 @@
 }
 a {
     color: #000;
+    text-decoration: none;
 }
 .adventure-item {
     border: solid 1px #EAEAEA;
@@ -23,9 +24,26 @@ a {
     width: 200px;
 
 }
+
+.adventure-item-length {
+    display: inline;
+}
+
+.adventure-item-price {
+    font-size: 13px;
+    color: grey;
+    margin: 10px 0 20px;
+    min-height: 35px;
+}
 .verb-item-image {
     width: 32px;
     height: 32px;
+}
+
+.verbs {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 40px 60px;
 }
 
 .Sign_PH {
@@ -93,4 +111,64 @@ a {
     padding: 30px;
     margin: 30px;
     border-radius: 5px;
+}
+
+.bg {
+    background-color: #FC6767;
+    height: 400px;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.footer {
+    text-align: center;
+    width: auto;
+    padding: 40px 20px;
+    border-top: 1px #8080803b solid;
+}
+
+.footer-items {
+    display: flex;
+    list-style: none;
+    margin-top: 1em;
+    padding: 0;
+    width: 100%;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.footer-item {
+    margin: 20px;
+}
+
+.btn {
+    border: 2px black solid;
+    width: fit-content;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin: 5px 0;
+}
+
+.blue {
+    background-color: #1473e6;
+    color: white;
+    border-color:  #1473e6;
+    display: block;
+}
+
+.white {
+    background-color: white;
+    color: black;
+    border-color: gray;
+    display: block;
+}
+
+.black {
+    background-color: black;
+    color: white;
+    display: block;
 }
