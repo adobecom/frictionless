@@ -4,6 +4,9 @@ import { Link, useNavigate, useLocation } from 'react-router-dom'
 import useGraphQL from '../api/useGraphQL';
 import Error from './Error';
 import Loading from './Loading';
+import SeoBlade from './SeoBlade';
+import Foot from './Foot';
+
 
 function Verbs() {
     let location = useLocation();
@@ -14,9 +17,14 @@ function Verbs() {
     function handleClick() {
       navigate("/");
       navigate(0);
-
     }
 
+    const script = document.createElement('script');
+
+    function mockWidget() {
+      alert('Converting the widget');
+      sessionStorage.didsomestuff = true;
+    }
 
     if(!data) return <Loading />;
 
@@ -25,10 +33,13 @@ function Verbs() {
             <Link className="adventure-detail-close-button"  to={"/"} onClick={handleClick}>
                 ...
             </Link>
-
-            <div className="fake-dc">
+            <div className="bg"></div>
+            <div onClick={mockWidget} className="fake-dc">
               {data.verbByPath.item.title}
             </div>
+      
+            <SeoBlade path={contentFragmentPath} />
+            <Foot />
         </div>
     )
 
