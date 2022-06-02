@@ -194,3 +194,22 @@ a {
     position: relative;
 
 }
+
+.seo-wrapper {
+    background-color: #fafafa;
+    padding: 100px 0 50px; 
+}
+
+.Z {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Z-Left {
+    margin-right: 20px;
+}
+
+.Z-Right {
+    margin-left: 20px;
+}
