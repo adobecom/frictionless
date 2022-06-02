@@ -172,3 +172,16 @@ a {
     color: white;
     display: block;
 }
+
+.salmon {
+    background-color: #FC6767;
+}
+
+.converter {
+    width: 83.333333%;
+    max-width: 83.333333%;
+    flex: 1 1 auto;
+    min-height: inherit!important;
+    z-index: 1;
+
+}
