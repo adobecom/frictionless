@@ -186,7 +186,7 @@ a {
 .converter {
     /* width: 83.333333%;
     max-width: 83.333333%; */
-    max-width: 1380px;
+    max-width: 1160px;
     flex: 1 1 auto;
     min-height: inherit!important;
     z-index: 1;
@@ -218,4 +218,16 @@ a {
 
 .center {
     text-align: center  ;
+}
+
+li.verb-menu-item {
+    display: inline-flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.verbs-menu {
+    padding-top: 30px;
 }
