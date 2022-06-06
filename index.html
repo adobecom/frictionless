@@ -1,1 +1,41 @@
 <head><script defer="defer" src="/scripts.js"></script></head><div></div>
+<link rel="stylesheet" href="/styles.css">
+
+
+<script>
+    window.fedsConfig = {
+        locale: 'us',
+        disableSticky: false,
+        content: {
+            experience: 'frictionless-gnav-white-footer/dc-fl-mega-menu/frictionless-localnav',
+        },
+        profile: {
+            customSignIn: function (originalSignIn) {
+                var ECHOSIGN_SIGNIN_LINK = window.location.hostname === 'acrobat.adobe.com' ? 'https://secure.echosign.com/public/login':'https://secure.echosignstage.com/public/login';
+                if (window.location.hostname === 'www.adobe.com') {
+                    ECHOSIGN_SIGNIN_LINK = 'https://secure.echosign.com/public/login';
+                }
+
+                var ACTIVE_REGEX = /^(((\/content\/dx-dc)?\/([^/]+)\/([^/]+))|\/[a-z]*(_[a-z]*)?)?\/(temp-dx\/sign|sign|why-adobe)(\/|\.html)/;
+                var pattern = new RegExp(ACTIVE_REGEX);
+                if(pattern.test(location.pathname)){
+                    window.location = ECHOSIGN_SIGNIN_LINK;
+                } else {
+                    originalSignIn();
+                }
+            }
+        },
+        subnav: {"theme":{"base":"light","gradient":{"toColor":"#f8f8f8","fromColor":"#f8f8f8","opacity":1.0}}},
+        breadcrumbs: {
+            showLogo: true,
+            links: [{"title":"Adobe Document Cloud","url":"https://www.adobe.com/documentcloud.html","description":null,"target":"_self","pathType":null,"xfPath":null,"dynamicLinkType":null,"hiddenOnDesktopLayout":false,"children":null},{"title":"Acrobat","url":"https://www.adobe.com/acrobat.html","description":null,"target":"_self","pathType":null,"xfPath":null,"dynamicLinkType":null,"hiddenOnDesktopLayout":false,"children":null},{"title":"Online Tools","url":"https://www.adobe.com/acrobat/online.html","description":null,"target":"_self","pathType":null,"xfPath":null,"dynamicLinkType":null,"hiddenOnDesktopLayout":false,"children":null}]
+        },
+        footer: {
+            regionModal: function () { window.location.hash = 'languageNavigation'; }
+        },
+        privacy: {
+            otDomainId: '7a5eb705\u002D95ed\u002D4cc4\u002Da11d\u002D0cc5760e93db' || '7a5eb705-95ed-4cc4-a11d-0cc5760e93db',
+            footerLinkSelector: '[data\u002Dfeds\u002Daction=\x22open\u002Dadchoices\u002Dmodal\x22]',
+        },
+    };
+</script>
