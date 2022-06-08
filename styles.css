@@ -181,6 +181,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 400px;
 }
 
 .converter {
@@ -188,7 +189,7 @@ a {
     max-width: 83.333333%; */
     max-width: 1160px;
     flex: 1 1 auto;
-    min-height: inherit!important;
+    min-height: 400px !important;
     z-index: 1;
     top: 60px;
     position: relative;
@@ -197,7 +198,8 @@ a {
 
 .seo-wrapper {
     background-color: #fafafa;
-    padding: 100px 0 50px; 
+    padding: 100px 0 50px;
+    min-height: 350px;
 }
 
 .Z {
