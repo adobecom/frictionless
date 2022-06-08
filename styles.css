@@ -91,8 +91,8 @@ a {
   }
 
 .sign-in-wrapper {
-    background: #FC6767;
-    /* background: #4f5aa9; */
+    /* background: #FC6767; */
+    background: #4f5aa9;
     text-align: center;
     color: white;
     display: inline-block;
